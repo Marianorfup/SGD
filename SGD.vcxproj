@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Empleado.cpp" />
+    <ClCompile Include="Jugador.cpp" />
+    <ClCompile Include="Sistema.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Staff.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Empleado.h" />
+    <ClInclude Include="Jugador.h" />
+    <ClInclude Include="Sistema.h" />
+    <ClInclude Include="Staff.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -122,9 +135,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="SGD.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
