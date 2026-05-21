@@ -211,41 +211,52 @@ void Sistema::verModuloLaboral() {
 
     if (numJugadores == 0 && numStaff == 0) {
         cout << "\n  No hay empleados registrados.";
-        pausar(); 
+        pausar();
         return;
     }
 
     string deportes[] = { "Americano", "Futbol", "Basquetbol" };
     for (int d = 0; d < 3; d++) {
         bool hayJugadores = false;
-        for (int i = 0; i < numJugadores; i++)
-            if (jugadores[i].getEquipo() == deportes[d]) { hayJugadores = true; break; }
-
-        if (!hayJugadores) continue;
-
-        cout << "\n  --- JUGADORES " << deportes[d] << " ---";
         for (int i = 0; i < numJugadores; i++) {
-            if (jugadores[i].getEquipo() != deportes[d]) continue;
-            jugadores[i].mostrarInfoLaboral();
-            if (jugadores[i].getNumPartidosRegistrados() > 0)
-                jugadores[i].mostrarHistorial();
-            cout << "\n";
+            if (jugadores[i].getEquipo() == deportes[d]) {
+                hayJugadores = true;
+                break;
+            }
         }
 
         bool hayStaff = false;
-        for (int i = 0; i < numStaff; i++)
-            if (staffList[i].getEquipo() == deportes[d]) { 
-                hayStaff = true; 
+        for (int i = 0; i < numStaff; i++) {
+            if (staffList[i].getEquipo() == deportes[d]) {
+                hayStaff = true;
                 break;
             }
+        }
 
-        if (!hayStaff) continue;
+        if (!hayJugadores && !hayStaff) continue;
 
-        cout << "\n  --- STAFF " << deportes[d] << " ---";
-        for (int i = 0; i < numStaff; i++) {
-            if (staffList[i].getEquipo() != deportes[d]) continue;
-            staffList[i].mostrarInfoLaboral();
-            cout << "\n";
+        cout << "\n  ========================================";
+        cout << "\n  === " << deportes[d] << " ===";
+        cout << "\n  ========================================";
+
+        if (hayJugadores) {
+            cout << "\n  --- JUGADORES ---";
+            for (int i = 0; i < numJugadores; i++) {
+                if (jugadores[i].getEquipo() != deportes[d]) continue;
+                jugadores[i].mostrarInfoLaboral();
+                if (jugadores[i].getNumPartidosRegistrados() > 0)
+                    jugadores[i].mostrarHistorial();
+                cout << "\n";
+            }
+        }
+
+        if (hayStaff) {
+            cout << "\n  --- STAFF ---";
+            for (int i = 0; i < numStaff; i++) {
+                if (staffList[i].getEquipo() != deportes[d]) continue;
+                staffList[i].mostrarInfoLaboral();
+                cout << "\n";
+            }
         }
     }
     pausar();
