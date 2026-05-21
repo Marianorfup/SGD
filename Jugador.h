@@ -30,7 +30,6 @@ public:
     int getTotalStat1() const;
     int getTotalStat2() const;
 
-    // Nombres de las estadísticas según deporte/posición
     string getNombreStat1() const;
     string getNombreStat2() const;
 

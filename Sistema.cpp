@@ -183,7 +183,6 @@ void Sistema::registrarEstadisticas() {
         pausar(); return;
     }
 
-    // Mostrar meta y estadísticas específicas
     mostrarMetaBono(j.getEquipo(), j.getPosicion());
     cout << "\n  Partido " << j.getNumPartidosRegistrados() + 1 << " de " << j.getNumJuegosTemporada();
 
@@ -327,7 +326,7 @@ void Sistema::darAumento() {
             cout << "  " << i + 1 << ") " << jugadores[i].getNombre() << "\n";
         int idx; cout << "  Selecciona: "; cin >> idx; idx--;
         double aumento; cout << "  Monto del aumento $: "; cin >> aumento;
-        jugadores[idx] += aumento;   // SOBRECARGA
+        jugadores[idx] += aumento;   
         cout << "\n  Nuevo sueldo: $" << jugadores[idx].getSueldoMensual();
     }
     else {
@@ -340,7 +339,7 @@ void Sistema::darAumento() {
             cout << "  " << i + 1 << ") " << staffList[i].getNombre() << "\n";
         int idx; cout << "  Selecciona: "; cin >> idx; idx--;
         double aumento; cout << "  Monto del aumento $: "; cin >> aumento;
-        staffList[idx] += aumento;   // SOBRECARGA
+        staffList[idx] += aumento;   
         cout << "\n  Nuevo sueldo: $" << staffList[idx].getSueldoMensual();
     }
     pausar();
