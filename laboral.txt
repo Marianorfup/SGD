@@ -1,0 +1,8 @@
+
+--- JUGADORES Americano ---
+Nombre: Mariano
+Posicion: QB | Dorsal: 1
+Partidos: 0/17
+Total Touchdowns: 0
+Total Yardas: 0
+

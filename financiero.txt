@@ -1,0 +1,12 @@
+
+=== Americano ===
+--- Jugadores ---
+Nombre: Mariano
+Sueldo mensual: $12121212121212.00
+Aguinaldo: $6060606060606.00
+Prima vacacional: $252525252525.25
+Bono: $0.00
+Total mensual: $12121212121212.00
+
+
+NOMINA TOTAL MES: $12121212121212.00

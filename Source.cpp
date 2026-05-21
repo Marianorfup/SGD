@@ -14,6 +14,7 @@ void mostrarMenu() {
     cout << "  |  4) Registrar estadisticas / bono    |\n";
     cout << "  |  5) Dar aumento de sueldo            |\n";
     cout << "  |  6) Buscar empleado                  |\n";
+    cout << "  |  7) Eliminar empleado                |\n";
     cout << "  |  0) Salir                            |\n";
     cout << "  +======================================+\n";
     cout << "  Opcion: ";
@@ -28,21 +29,15 @@ int main() {
         cin >> opcion;
 
         switch (opcion) {
-        case 1: sistema.agregarEmpleado();       
-            break;
-        case 2: sistema.verModuloLaboral();      
-            break;
-        case 3: sistema.verModuloFinanciero();   
-            break;
-        case 4: sistema.registrarEstadisticas(); 
-            break;
-        case 5: sistema.darAumento();            
-            break;
-        case 6: sistema.buscarEmpleado();        
-            break;
-        case 0: cout << "\n  Saliendo";   
-            break;
-        default: cout << "\n  Opcion invalida";
+        case 1: sistema.agregarEmpleado();       break;
+        case 2: sistema.verModuloLaboral();      break;
+        case 3: sistema.verModuloFinanciero();   break;
+        case 4: sistema.registrarEstadisticas(); break;
+        case 5: sistema.darAumento();            break;
+        case 6: sistema.buscarEmpleado();        break;
+        case 7: sistema.eliminarEmpleado();      break;
+        case 0: cout << "\n  Hasta luego!\n";   break;
+        default: cout << "\n  Opcion invalida.\n";
         }
     } while (opcion != 0);
 
